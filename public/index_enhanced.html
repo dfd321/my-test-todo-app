@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Todo App</h1>
+        
+        <div class="add-todo">
+            <div class="input-container">
+                <input type="text" id="todoInput" placeholder="Add a new todo..." maxlength="500">
+                <div class="character-count">
+                    <span id="charCount">0</span>/500
+                </div>
+            </div>
+            <button id="addBtn">Add Todo</button>
+            <div id="errorMessage" class="error-message hidden"></div>
+        </div>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        
+        <ul id="todoList" class="todo-list"></ul>
+        
+        <div class="stats">
+            <span id="todoCount">0 todos</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
