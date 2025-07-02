@@ -5,7 +5,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "docker:build": "docker build -t todo-app .",
+    "docker:dev": "docker-compose up --build",
+    "docker:prod": "docker build -t todo-app:prod --target production .",
+    "docker:stop": "docker-compose down"
   },
   "keywords": [],
   "author": "",
