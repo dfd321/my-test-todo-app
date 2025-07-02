@@ -1,0 +1,16 @@
+# Claude Coding Agent Configuration v3.1
+project_name: Simple Todo App
+version: 1.0.0
+primary_language: javascript
+framework: express
+database: json-file
+
+# Current Status
+status: Basic CRUD complete, needs v3.1 compliance
+
+# Next Steps
+- Add proper error handling
+- Add input validation
+- Add tests
+- Add proper logging
+- Follow v3.1 quality standards
