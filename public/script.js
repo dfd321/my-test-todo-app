@@ -137,13 +137,13 @@ class TodoApp {
         }
 
         this.todoList.innerHTML = filteredTodos.map(todo => `
-            <li class="todo-item ${todo.completed ? 'completed' : ''}">.
+            <li class="todo-item ${todo.completed ? 'completed' : ''}">
                 <input type="checkbox" class="todo-checkbox" 
                        ${todo.completed ? 'checked' : ''} 
-                       onchange="app.toggleTodo('${todo.id}')">.
-                <span class="todo-text">${this.escapeHtml(todo.text)}</span>.
-                <button class="delete-btn" onclick="app.deleteTodo('${todo.id}')">Delete</button>.
-            </li>.
+                       onchange="app.toggleTodo('${todo.id}')">
+                <span class="todo-text">${this.escapeHtml(todo.text)}</span>
+                <button class="delete-btn" onclick="app.deleteTodo('${todo.id}')">Delete</button>
+            </li>
         `).join('')
     }
 
