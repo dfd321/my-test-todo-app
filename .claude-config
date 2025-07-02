@@ -14,3 +14,9 @@ status: Basic CRUD complete, needs v3.1 compliance
 - Add tests
 - Add proper logging
 - Follow v3.1 quality standards
+
+# GitHub Integration
+github_repo: dfd321/my-test-todo-app
+issue_tracking: true
+pr_template: .github/pull_request_template.md
+ci_workflow: .github/workflows/ci.yml
