@@ -10,5 +10,11 @@
     "text": "aazing",
     "completed": false,
     "createdAt": "2025-07-02T21:37:58.628Z"
+  },
+  {
+    "id": "1751495643407",
+    "text": "Valid todo item",
+    "completed": false,
+    "createdAt": "2025-07-02T22:34:03.408Z"
   }
 ]
