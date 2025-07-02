@@ -1,0 +1,125 @@
+/* Validation-specific styles to append to existing style.css */
+
+/* Input container for validation elements */
+.input-container {
+    position: relative;
+    flex: 1;
+}
+
+/* Character counter styling */
+.character-count {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #666;
+    background: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+.character-count.warning {
+    color: #f39c12;
+}
+
+.character-count.danger {
+    color: #e74c3c;
+}
+
+/* Error message styling */
+.error-message {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #ffeaa7;
+    border: 1px solid #fdcb6e;
+    border-radius: 4px;
+    color: #e17055;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.error-message.hidden {
+    display: none;
+}
+
+.error-message.error {
+    background: #ffebee;
+    border-color: #f48fb1;
+    color: #c62828;
+}
+
+.error-message.success {
+    background: #e8f5e8;
+    border-color: #81c784;
+    color: #2e7d32;
+}
+
+/* Input validation states */
+#todoInput.invalid {
+    border-color: #e74c3c;
+    background-color: #fdf2f2;
+}
+
+#todoInput.valid {
+    border-color: #27ae60;
+    background-color: #f0fdf4;
+}
+
+#todoInput.warning {
+    border-color: #f39c12;
+    background-color: #fffbf0;
+}
+
+/* Enhanced button states */
+#addBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: #bdc3c7;
+    transform: none;
+}
+
+#addBtn:disabled:hover {
+    transform: none;
+    background: #bdc3c7;
+}
+
+/* Validation feedback animations */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.error-message:not(.hidden) {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive validation elements */
+@media (max-width: 600px) {
+    .character-count {
+        position: static;
+        transform: none;
+        text-align: right;
+        margin-top: 4px;
+        font-size: 11px;
+    }
+    
+    .input-container {
+        margin-bottom: 8px;
+    }
+    
+    .add-todo {
+        flex-direction: column;
+    }
+}
